@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw2wyihd4vi64"]
+
+[ext_resource type="Script" path="res://scri[ts/bubble_generator.gd" id="1_ggwd6"]
+[ext_resource type="PackedScene" uid="uid://3qm8qhhuadk7" path="res://character.tscn" id="1_psg2g"]
+
+[node name="bathroom" type="Node2D"]
+script = ExtResource("1_ggwd6")
+
+[node name="character" parent="." instance=ExtResource("1_psg2g")]
+position = Vector2(299, 128)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

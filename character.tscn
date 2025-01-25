@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://3qm8qhhuadk7"]
+
+[ext_resource type="Script" path="res://sprite_2d.gd" id="1_e1bls"]
+[ext_resource type="Texture2D" uid="uid://c6hox76w6g37e" path="res://assets/Player/PlayerBasic1.png" id="1_u3oxj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ryyxs"]
+
+[node name="character" type="CharacterBody2D"]
+script = ExtResource("1_e1bls")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_u3oxj")
+
+[node name="ProgressBar" type="ProgressBar" parent="Sprite2D"]
+offset_left = -41.0
+offset_top = 29.0
+offset_right = 59.0
+offset_bottom = 56.0
+max_value = 200.0
+value = 199.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(4.5, 4.5)
+shape = SubResource("CircleShape2D_ryyxs")
