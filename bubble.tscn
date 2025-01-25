@@ -1,15 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://bvqq6ioo5ssga"]
 
 [ext_resource type="Script" path="res://bubble.gd" id="1_42rc2"]
-[ext_resource type="Texture2D" uid="uid://c33ku348kykxa" path="res://assets/Bubble.png" id="1_oggnc"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a80ru"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k4pnc"]
 
 [node name="bubble" type="Area2D"]
 script = ExtResource("1_42rc2")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_oggnc")
+[node name="shot" type="Sprite2D" parent="."]
+texture = SubResource("CompressedTexture2D_a80ru")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1.5, 1.5)

@@ -10,7 +10,9 @@ script = ExtResource("1_ggwd6")
 position = Vector2(299, 128)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 2.0
 autostart = true
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

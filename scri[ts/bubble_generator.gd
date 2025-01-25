@@ -1,4 +1,5 @@
 extends Node2D
+@onready var shot: Sprite2D = $shot
 @onready var timer: Timer = $Timer
 
 var burbuja = preload("res://bubble.tscn")
@@ -37,6 +38,7 @@ func decide_pos(instances:burbujas):
 
 func _on_timer_timeout() -> void:
 	var burbujas_instance=burbuja.instantiate()
+	#decide_shot(burbujas_instance)
 	decide_pos(burbujas_instance)
 	get_node("/root/bathroom").add_child(burbujas_instance)
-	timer.start(5)
+	timer.start(2)
